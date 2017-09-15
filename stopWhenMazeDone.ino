@@ -1221,7 +1221,7 @@ int depthFirstSearch(){
   checkNodesToVisit(); //should robot stop?
   updateStack();
   checkEmptyStack(); //should robot stop? this is a safety net!
-  else{
+  if (!wasVisited){ //changed to make code compile
     int nextY = myStack.pop();
     int nextX = myStack.peek();
     myStack.push(nextY);
